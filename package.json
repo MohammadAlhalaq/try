@@ -1,0 +1,41 @@
+{
+  "name": "try",
+  "version": "1.0.0",
+  "description": "commertial website",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.text.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammadAlhalaq/try.git"
+  },
+  "author": "Mohammad Al-Hallaq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohammadAlhalaq/try/issues"
+  },
+  "homepage": "https://github.com/MohammadAlhalaq/try#readme",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "bcrypt": "^3.0.6",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.12.1"
+  }
+}
