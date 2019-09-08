@@ -1,0 +1,18 @@
+{{#if isSaller}}
+  {{error}}
+  <input type="button" value="add category" class="addcategorybutton">
+  <form action="/addcategory" method="POST" class="addcategory hidden">category : 
+  <input type="text" name="title" placeholder="title">
+    <input type="submit">
+  </form>
+  <input type="button" value="add post" class="addpostbutton">
+  <form action="/addpost" method="POST" class="addpost hidden">
+    title : <input type="text" name="title" placeholder="title"   aria-label="input" required>
+    content : <input type="text" name="content" placeholder="content" aria-label="input" required>
+    image : <input type="file" name="image" placeholder="image" aria-label="input">
+    price : <input type="number" name="price" placeholder="price" aria-label="input" required>
+    category : <input type="text" name="category" placeholder="category" aria-label="input">
+    <input type="submit">
+
+  </form>
+{{/if}}

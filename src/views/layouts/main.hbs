@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Try And Buy</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav>
+      <a href="/">{{username}} home </a>
+      <a href="/profile">profile</a>
+      
+    {{#if logedOut}}
+      <a href="/login">login</a>
+      <a href="/signup">sign up</a>
+    {{else}}
+      <a href="/logout">logout</a>
+    {{/if}}
+    </nav>
+      {{{body}}}
+    <footer><h2>copy right by mohammad al-hallaq</h2></footer>
+    <script src="./js/dom.js"></script>
+</body>
+</html>

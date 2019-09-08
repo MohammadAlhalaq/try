@@ -1,0 +1,35 @@
+{{> addpost}}
+    <article>
+      <section>
+    {{#if isSaller}}
+      {{#each posts}}
+        <h4>Trader  : {{this.name}}</h4>
+        <h3>title : {{this.title}}</h3>
+        <p>content : {{this.content}}</p>
+        <img src="{{this.image}}" alt="{{this.image}}">
+        <span>price : {{this.price}}</span>
+        <form action="deletepost" method="POST">
+          <input type="hidden" name="delete" value="{{this.postid}}">
+          <input type="submit" value="delete">
+        </form>
+        <input type="button" value="edit" class="edit">
+        <form action="/editpost" method="Post" class="editpost hidden">
+          title : <input type="text" name="title" placeholder="title"   aria-label="input" required>
+            content : <input type="text" name="content" placeholder="content" aria-label="input" required>
+            image : <input type="file" name="image" placeholder="image" aria-label="input">
+            price : <input type="number" name="price" placeholder="price" aria-label="input" required>
+            category : <input type="text" name="category" placeholder="category" aria-label="input">
+            <input type="hidden" name="postid" value="{{this.postid}}">
+            <input type="submit">
+        </form>
+      {{/each}}
+</section>
+    </article>
+
+    {{else}}
+      <h1>traders</h1>
+      {{#each posts}}
+        <a href="/trader/{{this.userid}}"><h5>{{this.name}}</h5></a>
+      {{/each}}
+    {{/if}}
+    

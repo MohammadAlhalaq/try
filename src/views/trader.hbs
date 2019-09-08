@@ -1,4 +1,3 @@
-{{> addpost}}
 <section>
   <h1>Posts</h1>
   {{#each posts}}
@@ -11,13 +10,8 @@
       <hr>
     </article>
   {{/each}}
-</section>
-<section>
-  <h1>categories</h1>
-  {{#each categories}}
-    <article>
-      <a href="/category/{{this.title}}"><h5>{{this.title}}</h5></a>
-      <hr>
-    </article>
+  <h1>traders</h1>
+  {{#each trader}}
+        <a href="/trader/{{this.userid}}"><h5>{{this.name}}</h5></a>
   {{/each}}
 </section>
